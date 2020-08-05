@@ -2,13 +2,13 @@ const visit = require('unist-util-visit');
 const emoji = require('node-emoji');
 const emoticon = require('emoticon');
 
-const RE_EMOJI = /:\+1:|:-1:|:[\w-]+:/g;
 const emoticons = emoticon.map(e => e.emoticons).flat();
 const c = [0, 1, 2, 3, 4].map(i => '[' + escapeRegExp(Array.from(new Set(emoticons.map(c => c[i]).filter(c => c))).join('')) + ']');
-const s = `${c[0]}${c[1]}(${c[2]}|(${c[2]}${c[3]})|(${c[2]}${c[3]}${c[4]}))?`
+const s = `${c[0]}${c[1]}${c[2]}${c[3]}${c[4]}|${c[0]}${c[1]}${c[2]}${c[3]}|${c[0]}${c[1]}${c[2]}|${c[0]}${c[1]}`;
 const g = `(${s})+`
 const f = `(^|[^\\w])${g}([^\\w]|$)`;
 const RE_EMOTICON = RegExp(f, 'g');
+const RE_EMOJI = /:\+1:|:-1:|:[\w-]+:/g;
 
 const DEFAULT_SETTINGS = {
   padSpaceAfter: false,
