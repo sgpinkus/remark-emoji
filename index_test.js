@@ -123,7 +123,8 @@ describe('remark-emoji', () => {
             const cases = {
                 'This text does not include emoji.': 'This text does not include emoji.\n',
                 ':++: or :foo: or :cat': ':++: or :foo: or :cat\n',
-                '::': '::\n'
+                '::': '::\n',
+                'wor:Ds': 'wor:Ds\n',
             };
 
             return Promise.all(
@@ -181,6 +182,16 @@ describe('remark-emoji', () => {
                 'Four char code ]:-)': 'Four char code 😈\n',
                 'No problem with :dog: - :d': 'No problem with 🐶 - 😛\n',
                 'With double quotes :"D': 'With double quotes 😊\n'
+            };
+
+            return Promise.all(
+                Object.keys(cases).map(c => processEmoticon(c).then(r => assert.equal(r, cases[c])))
+            );
+        });
+
+        xit('can handle sequences of emoji shortcodes (emoticon)', () => {
+            const cases = {
+                ':p]:-):"D': '😛😈😊\n',
             };
 
             return Promise.all(
