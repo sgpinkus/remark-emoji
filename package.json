@@ -1,5 +1,5 @@
 {
-  "name": "remark-emoji",
+  "name": "@sgpinkus/remark-emoji",
   "version": "2.1.0",
   "description": "Emoji transformer plugin for Remark",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhysd/remark-emoji.git"
+    "url": "git+https://github.com/sgpinkus/remark-emoji.git"
   },
   "keywords": [
     "markdown",
@@ -20,9 +20,9 @@
   "author": "rhysd <lin90162@yahoo.co.jp>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rhysd/remark-emoji/issues"
+    "url": "https://github.com/sgpinkus/remark-emoji/"
   },
-  "homepage": "https://github.com/rhysd/remark-emoji#readme",
+  "homepage": "https://github.com/sgpinkus/remark-emoji/",
   "devDependencies": {
     "eslint": "^6.8.0",
     "mocha": "^7.1.0",
@@ -34,6 +34,6 @@
   "dependencies": {
     "emoticon": "^3.2.0",
     "node-emoji": "^1.10.0",
-    "unist-util-visit": "^2.0.2"
+    "unist-util-visit": "^2.0.3"
   }
 }
