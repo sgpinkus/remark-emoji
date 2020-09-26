@@ -1,12 +1,9 @@
-remark-emoji
-============
-[![Build Status](https://travis-ci.org/rhysd/remark-emoji.svg?branch=master)](https://travis-ci.org/rhysd/remark-emoji)
-[![npm](https://badge.fury.io/js/remark-emoji.svg)](https://www.npmjs.com/package/remark-emoji)
+# remark-emoji
+*Forked from remark-emoji for better emoticon parsing.*
 
 This is a [remark](https://github.com/wooorm/remark) plugin to replace `:emoji:` to real UTF-8 emojis in text.
 
 ## Demo
-
 You can find a demo in the following [Codesandbox](https://codesandbox.io/s/remark-emoji-example-osvyi).
 
 ## Usage
@@ -27,16 +24,10 @@ console.log(remark().use(emoji).process(doc).contents);
 ## Options
 
 ### `options.padSpaceAfter`
-
-Setting to `true` means that an extra whitespace is added after emoji.
-This is useful when browser handle emojis with half character length and following character is hidden.
-Default value is `false`.
+Setting to `true` means that an extra whitespace is added after emoji. This is useful when browser handle emojis with half character length and following character is hidden. Default value is `false`.
 
 ### `options.emoticon`
-
-Setting to `true` means that [emoticon](https://www.npmjs.com/package/emoticon) shortcodes are supported (e.g. :-) will be replaced by 😃).
-Default value is `false`.
+Setting to `true` means that [emoticon](https://www.npmjs.com/package/emoticon) shortcodes are supported (e.g. :-) will be replaced by 😃). Default value is `false`.
 
 ## License
-
 Distributed under [the MIT License](LICENSE).
