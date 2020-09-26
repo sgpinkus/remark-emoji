@@ -1,6 +1,6 @@
 const visit = require('unist-util-visit');
 const emoji = require('node-emoji');
-const { replaceEmoticons } = require('./emoticon-to-emoji')
+const { replaceEmoticons } = require('emoticon-to-emoji')
 const emojiRegExp = /:\+1:|:-1:|:[\w-]+:/g;
 
 
