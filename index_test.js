@@ -189,7 +189,7 @@ describe('remark-emoji', () => {
       );
     });
 
-    xit('can handle sequences of emoji shortcodes (emoticon)', () => {
+    it('can handle sequences of emoji shortcodes (emoticon)', () => {
       const cases = {
         ':p]:-):"D': '😛😈😊\n',
       };
