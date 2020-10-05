@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "codename-to-emoji": "^0.1.0",
-    "emoticon-to-emoji": "^0.1.5",
+    "emoticon-to-emoji": "^0.1.7",
     "unist-util-visit": "^2.0.3"
   }
 }
